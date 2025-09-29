@@ -31,16 +31,25 @@
 
   <main>
     <section class="card">
-     <button class="btn" id="actionBtn"></button>
+     <button class="btn" id="button" onclick="change()"></button>
     </section>
   </main>
 
   <!-- Scripts -->
   <script>
     alert("caca boudin")
-    function change(){
-      
+   let choix = true;
+
+   function change(){
+    let button = document.getElementById("button");
+    if (choix == true) {
+      button.style.backgroundColor = "red";
+      choix = false;
+    } else {
+      button.style.backgroundColor = "blue";
+      choix = true;
     }
+   }
   </script>
 </body>
 </html>
